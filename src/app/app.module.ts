@@ -4,6 +4,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Downloader } from '@ionic-native/downloader';
+import { Camera }     from '@ionic-native/camera';
+// import { Platform } from 'ionic-angular';
+import { CdvPhotoLibraryPipeModule } from './cdv-photo-library.pipe.module';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -18,7 +21,8 @@ import { PhotoLibrary }                         from '@ionic-native/photo-librar
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    CdvPhotoLibraryPipeModule,
+    IonicModule.forRoot(MyApp)    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
